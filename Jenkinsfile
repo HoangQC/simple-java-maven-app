@@ -26,7 +26,7 @@ pipeline {
         }           
         stage('Deliver') {
             steps {                               
-                chmod '+x ./deliver.sh'
+                git update-index --chmod=+x ./deploy.sh
             }
         }
     }
