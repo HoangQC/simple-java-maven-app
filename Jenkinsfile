@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-        stage('Pre-Deliver') {
+        stage('Pre Deliver') {
             steps {                
                 chmod +x ./deliver.sh
             }
