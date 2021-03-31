@@ -23,14 +23,10 @@ pipeline {
                     junit 'target/surefire-reports/*.xml'
                 }
             }
-        }
-        stage('Pre Deliver') {
-            steps {                
-                chmod +x ./deliver.sh
-            }
-        }        
+        }           
         stage('Deliver') {
-            steps {                
+            steps {     
+                chmod +x './deliver.sh'           
                 sh './deliver.sh'
             }
         }
