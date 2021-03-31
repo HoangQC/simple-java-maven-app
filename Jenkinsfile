@@ -25,9 +25,8 @@ pipeline {
             }
         }
         stage('Deliver') {
-            steps {
-                sh whoami
-                sh './deliver.sh'
+            steps {                
+                sh 'deliver.sh'
             }
         }
     }
