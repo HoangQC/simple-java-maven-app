@@ -9,6 +9,5 @@ RUN add-apt-repository \
        "deb [arch=amd64] https://download.docker.com/linux/debian \
        $(lsb_release -cs) stable"
 RUN apt-get update && apt-get install -y docker-ce-cli
-RUN chmod 775 /var/jenkins_home
 USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean:1.24.5 docker-workflow:1.26"
